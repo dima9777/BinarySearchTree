@@ -1,17 +1,11 @@
-install: make get-deps
-./configure && make && make test
 language: cpp
-
 compiler:
   - clang
-  - gcc
-  
 addons:
   apt:
     packages:
       - cmake
-  
-script: 
+script:
   - mkdir build
-  - cd build 
+  - cd build
   - cmake .. && make
